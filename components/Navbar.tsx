@@ -32,16 +32,14 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
           scrolled || menuOpen
             ? "bg-warm-white shadow-sm"
-            : "bg-transparent"
+            : "bg-warm-white"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-12 flex items-center justify-between h-20">
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className={`font-[family-name:var(--font-cormorant)] text-xl md:text-2xl tracking-[0.25em] font-semibold transition-colors duration-300 ${
-              scrolled || menuOpen ? "text-charcoal" : "text-white"
-            }`}
+            className="font-[family-name:var(--font-cormorant)] text-xl md:text-2xl tracking-[0.25em] font-semibold text-charcoal"
           >
             ATHENA STONE CO.
           </Link>
@@ -52,9 +50,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-sm tracking-widest uppercase transition-colors duration-300 hover:text-gold ${
-                  scrolled ? "text-charcoal" : "text-white"
-                }`}
+                className="text-sm tracking-widest uppercase transition-colors duration-300 hover:text-gold text-charcoal"
               >
                 {l.label}
               </Link>
@@ -74,23 +70,17 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <motion.span
-              className={`block h-[2px] w-6 origin-center transition-colors ${
-                scrolled || menuOpen ? "bg-charcoal" : "bg-white"
-              }`}
+              className="block h-[2px] w-6 origin-center bg-charcoal"
               animate={menuOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className={`block h-[2px] w-6 transition-colors ${
-                scrolled || menuOpen ? "bg-charcoal" : "bg-white"
-              }`}
+              className="block h-[2px] w-6 bg-charcoal"
               animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className={`block h-[2px] w-6 origin-center transition-colors ${
-                scrolled || menuOpen ? "bg-charcoal" : "bg-white"
-              }`}
+              className="block h-[2px] w-6 origin-center bg-charcoal"
               animate={menuOpen ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.2 }}
             />
