@@ -27,8 +27,8 @@ function Hero() {
     <section ref={ref} className="relative h-screen overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
-          src="/images/luxury-kitchen-hero.jpg"
-          alt="Luxury marble countertop in modern kitchen"
+          src="/images/hero-marble-closeup.jpg"
+          alt="Luxury white marble countertop in designer kitchen"
           fill
           className="object-cover"
           priority
