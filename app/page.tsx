@@ -168,7 +168,7 @@ function Materials() {
 }
 
 const steps = [
-  { icon: MessageSquare, title: "Consultation", desc: "We listen to your vision" },
+  { icon: MessageSquare, title: "Free Consultation", desc: "We visit your space and listen to your vision" },
   { icon: Layers, title: "Material Selection", desc: "Hand-select your perfect slab" },
   { icon: Ruler, title: "Fabrication", desc: "Precision-cut to your specifications" },
   { icon: Hammer, title: "Installation", desc: "Flawless execution, every time" },

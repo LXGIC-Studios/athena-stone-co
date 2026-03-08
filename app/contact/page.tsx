@@ -43,6 +43,14 @@ export default function ContactPage() {
           >
             Get in Touch
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-4 text-taupe text-lg max-w-xl mx-auto"
+          >
+            Your first consultation is completely free. Tell us about your project and we will set up a time to visit your space.
+          </motion.p>
         </div>
       </section>
 
@@ -152,6 +160,24 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="mt-12 pt-8 border-t border-white/10">
+                <h3 className="font-[family-name:var(--font-cormorant)] text-xl mb-4">
+                  Consultations
+                </h3>
+                <div className="space-y-3 text-sm text-white/70">
+                  <div className="flex justify-between">
+                    <span>First visit</span>
+                    <span className="text-gold font-medium">Free</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Follow-up sessions</span>
+                    <span className="text-white/90">$75 each</span>
+                  </div>
+                  <p className="text-white/40 text-xs pt-2">
+                    Follow-up fees are credited toward your project if you move forward with us.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-8 border-t border-white/10">
                 <a
                   href="#"
                   className="flex items-center gap-3 border border-gold text-gold px-6 py-3 text-xs tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300 justify-center"

@@ -251,6 +251,99 @@ export default function PricingPage() {
         </motion.div>
       </section>
 
+      {/* Consultation Pricing */}
+      <section className="py-24 bg-charcoal text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light text-center mb-4"
+          >
+            Consultations
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-white/50 text-center mb-16 max-w-2xl mx-auto"
+          >
+            We want to make sure every project starts on the right foot. Your first consultation is completely free. Need more time with us? We offer follow-up sessions at a flat rate.
+          </motion.p>
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          >
+            {/* Free consultation */}
+            <motion.div variants={fadeUp} className="border border-gold p-10 text-center">
+              <span className="text-xs text-gold tracking-[0.3em] uppercase font-medium">Your First Visit</span>
+              <h3 className="font-[family-name:var(--font-cormorant)] text-3xl mt-4 mb-2">Free Consultation</h3>
+              <p className="font-[family-name:var(--font-cormorant)] text-5xl text-gold my-6">$0</p>
+              <ul className="text-white/60 text-sm space-y-3 text-left mb-8">
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>In-home or virtual walkthrough</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Material recommendations for your space</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Rough project estimate and timeline</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Up to 45 minutes, no obligation</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-block w-full border border-gold text-gold px-8 py-4 text-xs tracking-[0.2em] uppercase hover:bg-gold hover:text-white transition-all duration-300"
+              >
+                Book Your Free Consult
+              </Link>
+            </motion.div>
+
+            {/* Follow-up consultation */}
+            <motion.div variants={fadeUp} className="border border-white/15 p-10 text-center">
+              <span className="text-xs text-white/40 tracking-[0.3em] uppercase font-medium">Follow-Up Sessions</span>
+              <h3 className="font-[family-name:var(--font-cormorant)] text-3xl mt-4 mb-2">Design Consultation</h3>
+              <p className="font-[family-name:var(--font-cormorant)] text-5xl text-white my-6">$75<span className="text-lg text-white/40"> /session</span></p>
+              <ul className="text-white/60 text-sm space-y-3 text-left mb-8">
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Detailed design planning with slab selection</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Edge profile and layout recommendations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Color matching with cabinets and flooring</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span>Fee credited toward your project if you proceed</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-block w-full border border-white/30 text-white px-8 py-4 text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-all duration-300"
+              >
+                Schedule a Session
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <Image src="/images/marble-kitchen-1.jpg" alt="Marble kitchen" fill className="object-cover" />
