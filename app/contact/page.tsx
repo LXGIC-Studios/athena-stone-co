@@ -132,16 +132,9 @@ export default function ContactPage() {
             {/* Sidebar */}
             <motion.div variants={fadeUp} className="bg-charcoal text-white p-8 md:p-12">
               <h2 className="font-[family-name:var(--font-cormorant)] text-2xl mb-8">
-                Visit Our Studio
+                Contact Info
               </h2>
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <div className="text-sm text-white/70">
-                    <p>1200 Stone Ridge Blvd, Suite 100</p>
-                    <p>Austin, TX 78701</p>
-                  </div>
-                </div>
                 <div className="flex gap-4">
                   <Phone className="w-5 h-5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-sm text-white/70">(512) 555-0142</p>
