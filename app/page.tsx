@@ -113,7 +113,7 @@ const materials = [
   { name: "Granite", img: "/images/granite-slab.jpg", desc: "Enduring strength, natural beauty", className: "md:col-span-1 md:row-span-1" },
   { name: "Quartz", img: "/images/quartz-kitchen-2.jpg", desc: "Engineered perfection for modern living", className: "md:col-span-1 md:row-span-1" },
   { name: "Porcelain", img: "/images/countertop-detail.jpg", desc: "Ultra-thin, ultra-durable surfaces", className: "md:col-span-1 md:row-span-1" },
-  { name: "Soapstone", img: "/images/island-counter.jpg", desc: "Warm, tactile, perfectly imperfect", className: "md:col-span-2 md:row-span-1" },
+  { name: "Soapstone", img: "/images/island-counter.jpg", desc: "Warm, natural, perfectly imperfect", className: "md:col-span-2 md:row-span-1" },
 ];
 
 function Materials() {
