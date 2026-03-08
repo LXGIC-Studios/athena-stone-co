@@ -6,21 +6,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  { src: "/images/kitchen-1.jpg", category: "Kitchen", alt: "Kitchen 1" },
-  { src: "/images/kitchen-2.jpg", category: "Kitchen", alt: "Kitchen 2" },
-  { src: "/images/bathroom-1.jpg", category: "Bathroom", alt: "Bathroom 1" },
-  { src: "/images/kitchen-3.jpg", category: "Kitchen", alt: "Kitchen 3" },
-  { src: "/images/kitchen-4.jpg", category: "Commercial", alt: "Commercial 1" },
-  { src: "/images/bathroom-2.jpg", category: "Bathroom", alt: "Bathroom 2" },
-  { src: "/images/kitchen-5.jpg", category: "Kitchen", alt: "Kitchen 5" },
-  { src: "/images/kitchen-6.jpg", category: "Commercial", alt: "Commercial 2" },
-  { src: "/images/kitchen-7.jpg", category: "Kitchen", alt: "Kitchen 7" },
-  { src: "/images/kitchen-8.jpg", category: "Kitchen", alt: "Kitchen 8" },
-  { src: "/images/kitchen-9.jpg", category: "Commercial", alt: "Commercial 3" },
-  { src: "/images/marble-texture.jpg", category: "Commercial", alt: "Marble detail" },
+  { src: "/images/marble-kitchen-1.jpg", category: "Kitchen", alt: "White marble kitchen countertop with waterfall edge" },
+  { src: "/images/granite-counter-1.jpg", category: "Kitchen", alt: "Granite countertop with undermount sink" },
+  { src: "/images/marble-bath-1.jpg", category: "Bathroom", alt: "Marble bathroom vanity countertop" },
+  { src: "/images/quartz-kitchen-1.jpg", category: "Kitchen", alt: "Quartz countertop in modern kitchen" },
+  { src: "/images/luxury-kitchen-1.jpg", category: "Kitchen", alt: "Luxury kitchen with stone island countertop" },
+  { src: "/images/luxury-bath-1.jpg", category: "Bathroom", alt: "Luxury bathroom with marble surfaces" },
+  { src: "/images/granite-counter-2.jpg", category: "Kitchen", alt: "Granite kitchen counter with prep area" },
+  { src: "/images/island-counter.jpg", category: "Kitchen", alt: "Large kitchen island with stone countertop" },
+  { src: "/images/marble-kitchen-2.jpg", category: "Kitchen", alt: "Marble countertop with gold fixtures" },
+  { src: "/images/quartz-kitchen-2.jpg", category: "Kitchen", alt: "Engineered quartz countertop installation" },
+  { src: "/images/granite-slab.jpg", category: "Materials", alt: "Polished granite slab close-up" },
+  { src: "/images/marble-slab.jpg", category: "Materials", alt: "Calacatta marble slab with veining" },
+  { src: "/images/quartzite-slab.jpg", category: "Materials", alt: "Quartzite slab with natural patterns" },
+  { src: "/images/countertop-detail.jpg", category: "Kitchen", alt: "Countertop edge detail and finish" },
 ];
 
-const filters = ["All", "Kitchen", "Bathroom", "Commercial"];
+const filters = ["All", "Kitchen", "Bathroom", "Materials"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

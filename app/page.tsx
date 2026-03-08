@@ -27,8 +27,8 @@ function Hero() {
     <section ref={ref} className="relative h-screen overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
-          src="/images/hero-kitchen.jpg"
-          alt="Luxury kitchen countertop"
+          src="/images/luxury-kitchen-hero.jpg"
+          alt="Luxury marble countertop in modern kitchen"
           fill
           className="object-cover"
           priority
@@ -82,8 +82,8 @@ function Intro() {
       >
         <motion.div variants={fadeUp} className="relative aspect-[4/5] overflow-hidden">
           <Image
-            src="/images/kitchen-1.jpg"
-            alt="Stunning kitchen countertop"
+            src="/images/marble-kitchen-1.jpg"
+            alt="White marble countertop with gold veining"
             fill
             className="object-cover"
           />
@@ -108,12 +108,12 @@ function Intro() {
 }
 
 const materials = [
-  { name: "Marble", img: "/images/marble-texture.jpg", desc: "Timeless veining, unmatched elegance", className: "md:col-span-2 md:row-span-2" },
-  { name: "Quartzite", img: "/images/stone-texture-1.jpg", desc: "Nature's hardest, most beautiful stone", className: "md:col-span-1 md:row-span-1" },
-  { name: "Granite", img: "/images/granite-texture.jpg", desc: "Enduring strength, natural beauty", className: "md:col-span-1 md:row-span-1" },
-  { name: "Quartz", img: "/images/kitchen-3.jpg", desc: "Engineered perfection for modern living", className: "md:col-span-1 md:row-span-1" },
-  { name: "Porcelain", img: "/images/kitchen-4.jpg", desc: "Ultra-thin, ultra-durable surfaces", className: "md:col-span-1 md:row-span-1" },
-  { name: "Soapstone", img: "/images/kitchen-5.jpg", desc: "Warm, tactile, perfectly imperfect", className: "md:col-span-2 md:row-span-1" },
+  { name: "Marble", img: "/images/marble-slab.jpg", desc: "Timeless veining, unmatched elegance", className: "md:col-span-2 md:row-span-2" },
+  { name: "Quartzite", img: "/images/quartzite-slab.jpg", desc: "Nature's hardest, most beautiful stone", className: "md:col-span-1 md:row-span-1" },
+  { name: "Granite", img: "/images/granite-slab.jpg", desc: "Enduring strength, natural beauty", className: "md:col-span-1 md:row-span-1" },
+  { name: "Quartz", img: "/images/quartz-kitchen-2.jpg", desc: "Engineered perfection for modern living", className: "md:col-span-1 md:row-span-1" },
+  { name: "Porcelain", img: "/images/countertop-detail.jpg", desc: "Ultra-thin, ultra-durable surfaces", className: "md:col-span-1 md:row-span-1" },
+  { name: "Soapstone", img: "/images/island-counter.jpg", desc: "Warm, tactile, perfectly imperfect", className: "md:col-span-2 md:row-span-1" },
 ];
 
 function Materials() {
@@ -281,12 +281,75 @@ function Testimonials() {
   );
 }
 
+const pricingData = [
+  { material: "Granite", range: "$40 - $80 /sq ft", desc: "Installed" },
+  { material: "Marble", range: "$60 - $150 /sq ft", desc: "Installed" },
+  { material: "Quartzite", range: "$70 - $120 /sq ft", desc: "Installed" },
+  { material: "Quartz", range: "$50 - $100 /sq ft", desc: "Installed" },
+];
+
+function PricingPreview() {
+  return (
+    <section className="py-24 md:py-32 bg-charcoal text-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light text-center mb-4"
+        >
+          Transparent Pricing
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white/50 text-center mb-16 max-w-lg mx-auto"
+        >
+          Every quote includes material, fabrication, and professional installation. No hidden fees.
+        </motion.p>
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {pricingData.map((p) => (
+            <motion.div key={p.material} variants={fadeUp} className="text-center p-6 border border-white/10">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-xl mb-3">{p.material}</h3>
+              <p className="text-gold text-lg font-medium">{p.range}</p>
+              <p className="text-white/40 text-xs uppercase tracking-wider mt-1">{p.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/pricing"
+            className="inline-block border border-gold text-gold px-10 py-4 text-xs tracking-[0.3em] uppercase hover:bg-gold hover:text-white transition-all duration-300"
+          >
+            View Full Pricing
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function CTASection() {
   return (
     <section className="relative py-32 overflow-hidden">
       <Image
-        src="/images/stone-texture-1.jpg"
-        alt="Stone texture"
+        src="/images/granite-counter-2.jpg"
+        alt="Granite countertop close-up"
         fill
         className="object-cover"
       />
@@ -326,6 +389,7 @@ export default function HomePage() {
       <Intro />
       <Materials />
       <Process />
+      <PricingPreview />
       <Testimonials />
       <CTASection />
     </>
